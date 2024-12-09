@@ -1,3 +1,0 @@
-If the database not working properly than change the url
-
-localhost/then rest of it
