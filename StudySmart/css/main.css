@@ -1,0 +1,201 @@
+/* Root Variables */
+:root {
+    --primary-color: #333;
+    --secondary-color: #555;
+    --accent-color: #28a745;
+    --text-color: #fff;
+    --bg-color: #f9f9f9;
+    --font-family: Arial, sans-serif;
+    --link-hover-color: darkgreen;
+    --form-bg-color: #ffffff;
+    --form-border-color: #ccc;
+}
+
+/* Global Styles */
+body {
+    font-family: var(--font-family);
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+    color: var(--primary-color);
+    line-height: 1.6;
+}
+
+/* Navigation Bar */
+.nav-bar {
+    background: var(--primary-color);
+    text-align: center;
+    padding: 10px 0;
+}
+
+.nav-bar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-bar ul li {
+    margin: 0 10px;
+}
+
+.nav-bar ul li a {
+    color: var(--text-color);
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.nav-bar ul li a:hover {
+    background: var(--secondary-color);
+}
+
+.nav-bar ul li a.active {
+    background: var(--accent-color);
+}
+
+/* Containers */
+.main-container,
+.task-container,
+.profile-container {
+    max-width: 800px;
+    margin: 50px auto;
+    background: var(--form-bg-color);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom:100px;
+    
+}
+
+/* Form Styling */
+.task-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.task-container label {
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: var(--primary-color);
+}
+
+.task-container select,
+.task-container textarea,
+.task-container input[type="date"],
+.task-container input[type="time"] {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid var(--form-border-color);
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.task-container select:focus,
+.task-container textarea:focus,
+.task-container input[type="date"]:focus,
+.task-container input[type="time"]:focus {
+    border-color: var(--accent-color);
+    outline: none;
+}
+
+.task-container textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.task-container button {
+    padding: 10px 20px;
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.task-container button:hover {
+    background-color: darkgreen;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th, table td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid var(--secondary-color);
+}
+
+table th {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+}
+
+table td {
+    background-color: var(--bg-color);
+}
+
+/* Button Enhancements */
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    color: var(--link-hover-color);
+}
+
+/* Task Title */
+.task-container h1 {
+    text-align: center;
+    font-size: 24px;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background: var(--primary-color);
+    color: var(--text-color);
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .task-container form button {
+        font-size: 14px;
+    }
+
+    .task-container h1 {
+        font-size: 18px;
+    }
+
+    .nav-bar ul {
+        flex-direction: column;
+    }
+
+    .nav-bar ul li {
+        margin: 5px 0;
+    }
+
+    .task-container label,
+    .task-container select,
+    .task-container textarea,
+    .task-container input[type="date"],
+    .task-container input[type="time"] {
+        font-size: 14px;
+    }
+}

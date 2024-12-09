@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - StudySmart</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body style="background-image: url(./asset/hand-drawn-back-school-background_23-2149464866.avif);
+background-repeat: no-repeat;
+background-size: cover;">
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="signup.html">Sign Up</a></li>
+            <li><a href="login.html" class="active">Login</a></li>
+        </ul>
+    </nav>
+
+    <!-- Login Form -->
+    <div >
+        <div class="form-container">
+            <h1>Login</h1>
+            <form action="php/login_user.php" method="POST">
+                <label>Email</label>
+                <input type="email" name="email" placeholder="Enter email" required>
+                <label>Password</label>
+                <input type="password" name="password" placeholder="Enter password" required>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>&copy; 2024 StudySmart. All Rights Reserved.</footer>
+</body>
+</html>
